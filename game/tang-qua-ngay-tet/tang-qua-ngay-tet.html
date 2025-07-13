@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Nunito:wght@700;800&family=Patrick+Hand&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Nunito:wght@700;800&family=Patrick+Hand&family=Roboto&family=Signika:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Fira+Sans:ital@1&family=Nunito:wght@700;800&family=Patrick+Hand&family=Quicksand:wght@600&family=Roboto&family=Signika:wght@600&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tang-qua-ngay-tet.css">
+    <title>Game Tặng quà ngày Tết</title>
+</head>
+<body>
+    <div id="introduce">
+        <div id="text_introduce">
+            <span style="
+            font-weight: 600;
+            font-size: 70px;
+            font-family: 'Patrick Hand', cursive;
+            "><a style="
+            text-decoration: none;
+            color: gold;
+            cursor: text;
+            " href="https://tabby-eager-quark.glitch.me/" target="_blank">Tết đã đến rồi!</a></span><br><br>
+            <span style="
+            font-weight: 600;
+            font-size: 85px;
+            color: chartreuse;
+            font-family: 'Signika', sans-serif;
+            ">Trò chơi Quà Tặng ngày Tết</span>
+        </div>
+        <div type="button" id="button_play">Chơi</div>
+    </div>
+    <div id="index">
+        <br>
+        <span style="
+            font-weight: 600;
+            font-size: 48px;
+            font-family: monospace;
+            color: gold;
+            outline: greenyellow;
+            margin-top: 10px;
+        ">Hãy chọn 3 hộp bất kì trong 6 hộp này:</span>
+        <div style="
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-top: 209px;
+        ">
+            <span style="
+            font-family: 'Quicksand', sans-serif;
+            color: rgb(255, 251, 0);
+            margin-left: 90px;
+            font-size: 23px;
+            font-weight: 600;
+            ">Tổng điểm:<br>
+            <input id="result" autocomplete="off" style="
+            margin-left: -22px;
+            margin-top: 10px;
+            position: absolute;
+            width: 141px;
+            height: 32px;
+            font-family: cursive;
+            font-size: 24px;
+            text-align: center;
+            ">
+            </span>
+            <button id="button_submit" style="
+            position: absolute;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 309px;
+            margin-left: 116px;
+            font-size: 20px;
+            top: 0px;
+            left: 0px;
+        ">Xong</button>
+        </div>
+        <div style="margin-top: 20px">
+            <div class="choose_div" id="choose_div_1">1</div>
+            <div class="choose_div" id="choose_div_2">2</div>
+            <div class="choose_div" id="choose_div_3">3</div>
+            <div class="choose_div" id="choose_div_4">4</div>
+            <div class="choose_div" id="choose_div_5">5</div>
+            <div class="choose_div" id="choose_div_6">6</div>
+        </div>
+        <button id="button_tutorial" style="
+            position: absolute;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 252px;
+            margin-right: 54px;
+            font-size: 20px;
+            top: 0px;
+            right: 0px;
+        ">Hướng dẫn</button>
+        <button id="button_tutorial_2" style="
+        position: absolute;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 252px;
+        margin-right: 54px;
+        font-size: 20px;
+        top: 0px;
+        right: 0px;
+        display: none;
+        ">Hướng dẫn</button>
+        <div id="index_tutorial">
+            Đây cũng là 1 phần của trò chơi này. Mục đích là phần bonus thêm cho trò chơi. Trong 6 ô này, mỗi ô sẽ có điểm khác nhau, bạn sẽ chọn 3 ô, rồi cộng điểm ở các ô lại và nhập vào ô tổng điểm ở bên trái, rồi nhấn Xong, game sẽ cho bạn biết bạn được tặng gì.
+        </div>
+    </div>
+    <div id="main">
+        <img id="header_main" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fbgr_main_2%20-%20Copy.png?1648125954432">
+        <div id="transparent"></div>
+        <span style="
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-family: 'Patrick Hand', cursive;
+        color: lime;    
+        font-size: 35px;
+        margin-right: 489px;
+        margin-top: 56px;
+        ">Chọn 10 bao lì xì bất kì</span>
+        <button class="button_main" id="button_main">Xem phần thưởng</button>
+        <button class="button_main" id="button_main_2">Ẩn phần thưởng</button>
+        <div>
+            <img class="img_lucky_money" id="img_lucky_money_1" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_2" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_3" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_4" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_5" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_6" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_7" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_8" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_9" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_10" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_11" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_12" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_13" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_14" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_15" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_16" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_17" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_18" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_19" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_20" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_21" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_22" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_23" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+            <img class="img_lucky_money" id="img_lucky_money_24" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fli_xi.jpg?1648125961686">
+        </div>
+    </div>    
+    <div id="gift_collection">
+        <div style="
+        text-align: center;
+        font-family: 'Neonderthaw', cursive;
+        font-size: 55px;
+        ">Tổng hợp Quà Tặng</div>
+        <div style="margin-top: 30px;">
+            <span class="text_about" style="margin-left: 165px;">Tổng hợp Quà Tặng của bạn:</span><br><br>
+        </div>
+        <div id="button_show_gift">Mở khung nhận quà</div>
+        <div id="give_gift">
+            <span style="font-family: calibri;font-size: 40px;text-decoration: underline;">
+                Tặng quà trong Game:</span><br><br>
+            <div id="un_img">
+                <span style="font-family: sans-serif;font-size: 25px;">Ảnh của bé Ủn:</span><br><br>
+                <img id="gift_un_img" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fz3113910308335_37e940457faf5dbe88d12259c90bc97e.jpg?1648125970411">
+            </div>
+            <div id="TTHV_img">
+                <span style="font-family: sans-serif;font-size: 25px;">Ảnh của Thiên Thần Hộ Vệ:</span><br><br>
+                <img id="gift_TTVH_img" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTTHV.jpg?1648125964920">
+            </div>
+            <div id="fun_audio">
+                <span style="font-family: sans-serif;font-size: 25px;">Bài nhạc vui (Âm thanh nhạc to, điều chỉnh âm tượng thích hợp trước khi nghe):</span><br><br>
+                <audio controls>
+                    <source src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/Yucatan%20Peninsula%20-%20Biz%20Baz%20Studio.mp3?v=1648126003958">
+                </audio>
+            </div>
+        </div>
+        <div style="
+        position: absolute;
+        font-family: 'Signika';
+        font-size: 30px;
+        margin-bottom: 120px;
+        margin-left: 184px;
+        bottom: 0;
+        left: 0;
+        "><span style="display:inline-block">Quà tặng bonus:</span><div style="display: inline-block;margin-left: 10px;" id="inner_bonus"></div>
+        </div>
+        <button id="button_schedule_game">Trò chơi TKB</button>
+    </div>
+    <div id="look_lucky_list">
+        <span class="text_money" id="t_m_1">1 tờ giấy A4</span>
+        <span class="text_money" id="t_m_2">1 gói bánh</span>
+        <span class="text_money" id="t_m_3">1 tờ giấy gói quà</span>
+        <span class="text_money" id="t_m_4">2 tờ giấy A4</span>
+        <span class="text_money" id="t_m_5">1 tờ giấy A3</span>
+        <span class="text_money" id="t_m_6">2 tờ giấy A4</span>
+        <span class="text_money" id="t_m_7">Lì xì rỗng</span>
+        <span class="text_money" id="t_m_8">2 tờ giấy A3</span>
+        <span class="text_money" id="t_m_9">1 tờ giấy A4</span>
+        <span class="text_money" id="t_m_10">1 bài kiểm tra toán</span>
+        <span class="text_money" id="t_m_11">1 tờ giấy A3</span>
+        <span class="text_money" id="t_m_12">Lì xì rỗng</span>
+        <span class="text_money" id="t_m_13">2 tờ giấy gói quà</span>
+        <span class="text_money" id="t_m_14">Lì xì rỗng</span>
+        <span class="text_money" id="t_m_15">1 ảnh bé Ủn</span>
+        <span class="text_money" id="t_m_16">2 tờ giấy A4</span>
+        <span class="text_money" id="t_m_17">3 tờ giấy A4</span>
+        <span class="text_money" id="t_m_18">2 tờ giấy A4</span>
+        <span class="text_money" id="t_m_19">1 ảnh Thiên Thần Hộ Vệ</span>
+        <span class="text_money" id="t_m_20">Lì xì rỗng</span>
+        <span class="text_money" id="t_m_21">1 bài nhạc</span>
+        <span class="text_money" id="t_m_22">3 gói bánh</span>
+        <span class="text_money" id="t_m_23">1 thẻ sưu tập Kun</span>
+        <span class="text_money" id="t_m_24">Lì xì rỗng</span>
+    </div>
+    <div id="father_un_zoom_img" style="
+        background-color: rgba(0, 0, 0, 0.521);
+        position: fixed;
+        text-align: center;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    "><img id="un_zoom_img"src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fz3113910308335_37e940457faf5dbe88d12259c90bc97e.jpg?1648125970411">
+    </div>
+    <div id="father_TTHV_zoom_img" style="
+        background-color: rgba(0, 0, 0, 0.521);
+        position: fixed;
+        text-align: center;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    "><img id="TTHV_zoom_img" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTTHV.jpg?1648125964920">
+    </div>
+    <div id="follow_page">
+        <div style="
+        text-align: center;
+        font-family: cursive;
+        font-size: 33px;
+        ">Trang theo dõi Game</div>
+        <div style="margin-top: 30px;">
+            <span class="text_about">Toàn bộ các trang trong Game:</span><br><br>
+            <p class="father_link_page">1. <span class="link_page" id="link_introduce">Trang giới thiệu</span></p>
+            <p class="father_link_page">2. <span class="link_page" id="link_index">Trang bonus</span></p>
+            <p class="father_link_page">3. <span class="link_page" id="link_main">Trang chọn bao lì xì</span></p>
+            <p class="father_link_page">4. <span class="link_page" id="link_gift_collection">Trang tổng hợp Quà Tặng</span></p>
+            <p id="l">5. <span>Trang theo dõi Game</span></p>
+        </div>
+        <div style="margin-top: 30px;">
+            <span class="text_about">Theo dõi sự kiện:</span><br><br>
+            <span class="text_about_page c_b">Hộp đã chọn ở trang bonus:</span>
+            <div class="text_about_page c_b" id="c_b_1"></div>
+            <div class="text_about_page c_b" id="c_b_2"></div>
+            <div class="text_about_page c_b" id="c_b_3"></div>
+            <div class="text_about_page c_b" id="c_b_4"></div>
+            <div class="text_about_page c_b" id="c_b_5"></div>
+            <div class="text_about_page c_b" id="c_b_6"></div><br>
+            <span class="text_about_page c_b">Tổng điểm:</span>
+            <div class="text_about_page c_b" id="c_b_t_1"></div>
+            <div class="text_about_page c_b" id="c_b_t_2"></div>
+            <div class="text_about_page c_b" id="c_b_t_3"></div>
+            <div class="text_about_page c_b" id="c_b_t_4"></div>
+            <div class="text_about_page c_b" id="c_b_t_5"></div>
+            <div class="text_about_page c_b" id="c_b_t_6"></div><br>
+            <span class="text_about_page c_b">Số điểm người chơi nhập vào:</span>
+            <div class="text_about_page c_b" id="inner_point"></div><br>
+            <span class="text_about_page c_b">Số hộp người chơi nhấn ở trang lì xì<br>
+            (Mỗi số 1 là một hộp):
+            </span><br>
+            <div id="result_money"></div>
+        </div>
+    </div>
+
+<div id="schedule_game">
+    <div id="scd_introduce">
+        <a href="https://tabby-eager-quark.glitch.me/" target="_blank">
+            <img id="channel_name" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fsun_station.jpg?1648126019085">
+        </a>
+        <img id="game_name" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fschedule_game.jpg?1648126018164">
+        <img id="mean_game_name" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fthoi_khoa_bieu.jpg?1648126022235">
+        <div id="play_button">Play</div>
+    </div>
+    <!--
+        Giao diện trang Game các màn, các chức năng để người dùng tương tác:
+     - Có thể kéo thả các ô có tên môn học vào các ô ở trong phần dưới bảng Thời Khoá Biểu
+     - Có nút nhấn ở góc màn hình -> Hover vào thẻ có class là "father-button_end"
+     -> Hiện Animation ra nút "button_end"
+     - Nhấn vào nút Tiếp theo -> Dẫn đến trang màn tiếp theo.
+    -->
+    <div class="man" id="man_1">
+            <div class="bonus_button">Thêm
+                <div class="bonus_subjects">
+                <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_1">Đạo Đức</div>
+                </div>
+                <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_2">TH Toán</div>
+                </div>
+                <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_3">TH Tiếng Việt</div>
+                </div>
+                <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_4">Kể chuyện</div>
+                </div>
+                </div>
+            </div>
+        <div class="return" id="return_1"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_1"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 2</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="1">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="2">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="3">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="4">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="5">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="6">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="7">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="8">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="9">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-1">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_2">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_5">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_6">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_7">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_8">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_2"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_1"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của sáng Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="10">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="11">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="12">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="13">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="14">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="15">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="16">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="17">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="18">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-2">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_3">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_9">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_10">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_11">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_12">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_3"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_2"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 4</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="19">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="20">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="21">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="22">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="23">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="24">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="25">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="26">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="27">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-3">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_4">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_13">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_14">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_15">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_16">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_4"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_2"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của sáng Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="28">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="29">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="30">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="31">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="32">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="33">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="34">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="35">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="36">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-4">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_5">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_17">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_18">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_19">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_20">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_5"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_1"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 2 và sáng Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="37">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="38">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="39">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="40">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="41">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="42">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="43">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="44">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="45">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-5">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_6">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_21">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_22">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_23">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_24">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_6"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của chiều Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="46">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="47">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="48">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="49">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="50">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="51">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="52">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="53">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="54">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-6">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_7">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_25">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_26">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_27">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_28">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_7"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_2"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 5 và sáng Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="55">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="56">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="57">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="58">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="59">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="60">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="61">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="62">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="63">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-7">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_8">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_29">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_30">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_31">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_32">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_8"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của chiều Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="64">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="65">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="66">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="67">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="678">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="69">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="70">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="71">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="72">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-8">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_9">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_33">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_34">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_35">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_36">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_9"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_1"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của sáng Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="73">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="74">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="75">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="76">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="77">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="78">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="79">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="80">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="81">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-9">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_10">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_37">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_38">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_39">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_40">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_10"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 3 và sáng Thứ 4</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="82">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="83">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="84">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="85">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="86">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="87">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="88">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="89">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="90">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-10">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_11">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_41">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_42">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_43">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_44">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_11"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của chiều Thứ 2</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="91">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="92">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="93">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="94">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="95">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="96">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="97">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="98">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="99">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-11">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_12">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_45">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_46">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_47">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_48">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_12"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của sáng Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="100">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="101">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="102">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="103">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="104">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="105">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="106">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="107">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="108">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-12">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_13">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_49">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_50">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_51">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_52">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_13"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_2"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của chiều Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="109">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="110">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="111">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="112">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="113">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="114">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="115">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="116">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="117">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-13">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_14">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_53">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_54">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_55">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_56">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_14"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_1"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 2 và Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="118">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="119">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="120">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="121">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="122">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="123">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="124">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="125">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="126">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-14">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_15">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_57">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_58">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_59">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_60">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_15"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 3 và sáng Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="127">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="128">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="129">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="130">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="131">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="132">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="133">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="134">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="135">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-15">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_16">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_61">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_62">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_63">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_64">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_16"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_2"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="136">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="137">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="138">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="139">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="140">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="141">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="142">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="143">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="144">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-16">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_17">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_65">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_66">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_67">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_68">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_17"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="145">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="146">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="147">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="148">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="149">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="150">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="151">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="152">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="153">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-17">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_18">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_69">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_70">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_71">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_72">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_18"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của chiều Thứ 3 và chiều Thứ 4</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="154">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="155">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="156">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="157">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="158">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="159">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="160">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="161">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="162">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-18">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_19">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_73">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_74">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_75">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_76">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_19"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của sáng Thứ 5 và sáng Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="163">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="164">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="165">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="166">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="167">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="168">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="169">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="170">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="171">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-19">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_20">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_77">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_78">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_79">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_80">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_20"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của sáng Thứ 5 và sáng Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="172">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="173">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="174">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="175">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="176">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="177">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="178">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="179">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="180">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-20">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_21">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_81">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_82">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_83">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_84">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_21"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của sáng Thứ 4 và chiều Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="181">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="182">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="183">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="184">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="185">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="186">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="187">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="188">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="189">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-21">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_22">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_85">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_86">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_87">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_88">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_22"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="190">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="191">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="192">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="193">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="194">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="195">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="196">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="197">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="198">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-22">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_23">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_89">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_90">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_91">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_92">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_23"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của sáng Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="199">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="200">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="201">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="202">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="203">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="204">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="205">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="206">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="207">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-23">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_24">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_93">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_94">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_95">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_96">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_24"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_3"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của Thứ 3 và Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="208">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="209">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="210">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="211">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="212">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="213">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="214">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="215">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="216">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-24">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_25">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_97">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_98">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_99">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_100">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_25"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_4"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của Thứ 2 và Thứ 3</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="217">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="218">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="219">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="220">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="221">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="222">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="223">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="224">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="225">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-25">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_26">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_101">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_102">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_103">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_104">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_26"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_5"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 5</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="226">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="227">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="228">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="229">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="230">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="231">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="232">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="233">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="234">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-26">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_27">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_105">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_106">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_107">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_108">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_27"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_5"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của sáng Thứ 3 và chiều Thứ 6</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="235">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="236">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="237">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="238">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="239">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="240">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="241">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="242">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="243">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-27">Tiếp theo!</div></div>
+    </div>
+    
+    <div class="man" id="man_28">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_109">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_110">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_111">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_112">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_28"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_5"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 2</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="244">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="245">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="246">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="247">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="248">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="249">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="250">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="251">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="252">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-28">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_29">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_113">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_114">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_115">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_116">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_29"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_5"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn Thời Khoá Biểu của Thứ 4</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="253">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="254">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="255">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="256">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="257">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="258">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="259">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="260">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="261">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-29">Tiếp theo!</div></div>
+    </div>
+    <div class="man" id="man_30">
+        <div class="bonus_button">Thêm
+            <div class="bonus_subjects">
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_117">Đạo Đức</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_118">TH Toán</div>
+            </div>
+            <div class="drag_subjects b " ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="bn_119">TH Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects b" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="bn_120">Kể chuyện</div>
+            </div>
+            </div>
+        </div>
+        <div class="return" id="return_30"></div>
+        <div class="title">Schedule Game - Sun Station</div>
+        <div class="schedule random_5"></div>
+        <div class="request"><u>Yêu cầu:</u> Soạn TKB của Thứ 4, Thứ 6 và sáng Thứ 2</div>
+        <div class="father-drag_subjects">
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="262">Tiếng Việt</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="263">Toán</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="264">Tiếng Anh</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="265">Khoa Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects" draggable="true" ondragstart="drag(event)" id="266">Lịch sử & Địa lí</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="267">Tin Học</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="268">Kĩ Thuật</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="269">Âm Nhạc</div>
+            </div>
+            <div class="drag_subjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="subjects t" draggable="true" ondragstart="drag(event)" id="270">Mĩ Thuật</div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop_subjects" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="father-button_end"><div class="button_end" id="button_end-30">Tiếp theo!</div></div>
+    </div> 
+</div>
+
+</body>
+<script type="text/javascript" src="tang-qua-ngay-tet.js"></script>
+</html>

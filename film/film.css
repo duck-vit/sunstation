@@ -1,0 +1,79 @@
+
+#header_button_film_script {
+    border-bottom: 8px solid rgba(255,213,79,1.0000000000);
+}
+
+#button_funny_img {
+    background-color: rgba(255,213,79,1);
+    color: black;
+    position: absolute;
+    right: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+#button_funny_img:hover {
+    box-shadow: 0 0 8px rgb(155, 155, 155);
+}
+
+.film_div {
+    background-color: #21b9ff;
+    padding-bottom: 20px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin-top: -3px;
+}
+
+.title_name_film {
+    background-color: #fff01b;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    padding: 13px 0px 15px 30px;
+    margin: 0px 0px 20px 0px;
+    font-weight: 600;
+    border-bottom: 3px solid black;
+}
+
+.film,
+.img_film {
+    width: 250px;
+    height: 367.47px;
+}
+
+.img_film {
+    border: 3px solid black;
+}
+
+.img_film:hover {
+    filter: brightness(0.8)
+}
+
+.film {
+    padding-top: 350px;
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+.title_episode_1 {
+    font-size: 33px;
+    position: absolute;
+    right: 0;
+    margin: -61px 0px 0px 0px;
+    padding: 0px 20px;
+    background-color: pink;
+    line-height: 76px;
+    border-left: 3px solid black;
+    cursor: default;
+    transition: 0.2s;
+}
+
+.title_episode_1:hover {
+    background-color: rgb(255, 162, 177);
+}

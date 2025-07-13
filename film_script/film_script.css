@@ -1,0 +1,72 @@
+
+#header_button_film_script {
+    border-bottom: 8px solid rgba(255,213,79,1.0000000000);
+}
+
+#father_content {
+    background-color: #f5f2f0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+#film_content,
+#content {
+    margin: 420px 50px;
+    text-align: center;
+}
+
+#film_content {
+    display: none;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+
+#film_script_title_text {
+    text-align: center;
+    font-family: 'fira-sans', sans-serif;
+    font-size: 40px;
+    margin-bottom: 33px;
+}
+
+#film_script_input_password {
+    color: blue;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    font-family: calibri;
+    font-size: 30px;
+}
+
+#film_script_button_submit {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: yellow;
+    display: inline-block;
+    margin: 30px 0px 30px 0px;
+    font-size: 35px;
+    padding: 10px 12px;
+    border: 3px solid black;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+#film_script_button_submit:hover {
+    background-color: aqua;
+}
+
+#videothonguyen {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 660px;
+    height: 371px;
+    margin-top: 25px;
+    z-index: 2;
+}

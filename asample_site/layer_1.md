@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="...">
+    <link rel="stylesheet" href="shared_file/shared.css">
+    <link rel="shotcut icon" href="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <div id="father_content"></div>
+
+    <div id="content">
+        <!-- Content -->
+    </div>
+
+    <div id="header">
+        <div id="header_introduce">
+            <div id="header__text--name_web" title="38">Sun Station</div>
+            <div id="header_navigation_bgr"></div>
+            <div id="header_navigation">
+                <div id="header_menu_icon" title="Menu">☰
+                    <div id="header_menu_box">
+                        <div class="header_menu_items" id="account_button" title="Tài khoản">Tài khoản</div>
+                        <div class="header_menu_items" id="tutorial_button" title="Hướng dẫn sử dụng Website">Hướng dẫn</div>
+                        <div class="header_menu_items" id="sign_up_button" title="Đăng kí">Đăng kí</div>
+                        <div class="header_menu_items" id="feedback_button" title="Phản hồi của bạn tới Sun Station">Phản hồi</div>
+                    </div>
+                </div>
+                <a id="link_header_logo" href="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013" target="_blank">
+                    <img id="header_logo" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+                </a>
+                <div id="header_home_name">Sun Station</div>
+                <img id="header_button_search" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_search_icon.png?v=1647326975141" title="Tìm kiếm">
+                <img id="header_button_search_hide" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_search_icon.png?v=1647326975141" title="Ẩn Tìm kiếm">
+                <a href="film.html" class="header_button_navigation" id="header_button_film_script">Phim</a>
+                <a href="post.html" class="header_button_navigation" id="header_button_posts">Bài viết</a>
+                <a href="image.html" class="header_button_navigation" id="header_button_image">Ảnh</a>
+                <a href="video.html" class="header_button_navigation" id="header_button_video">Video</a>
+                <a href="game.html" class="header_button_navigation" id="header_button_game">Trò chơi</a>
+                <a href="notification.html" class="header_button_navigation" id="header_button_notification">Thông báo</a>
+                <div class="header_button_navigation" id="header_button_home">Trang chủ</div>
+            </div>
+            <div id="header_search_box">
+                <input id="header_input_search" type="search" placeholder="Tìm kiếm...">
+                <div id="header_button_search_submit">
+                    <img id="header_img_button_search_submit" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/icon-v.png?v=1647326979830">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div id="footer_content">
+            <div id="footer_text_title_name">Sun Station</div><br>
+            <span id="link_channel" style="
+            font-size: 20px;
+            cursor: default;
+            transition: 0.1s;
+            ">tabby-eager-quark.glitch.me</span><br><br>
+            <div style="
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: 600;
+            display: inline-block;
+            ">Thông tin website</div><br>
+            <div style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            line-height: 30px;
+            display: inline-block;
+            ">Kênh: <span style="color: green;">Sun Station</span><br>
+            Chức năng Website: <span style="color: green;">Điều hành các hoạt động của kênh</span><br>
+            Ngày bắt đầu làm website: <span style="color: green;">6/3/2022 (Chủ Nhật)</span><br>
+            Giao diện: <span style="color: green;">Lấy ý tưởng từ </span><span style="color:rgb(0, 114, 228)">Google sites</span><br>
+            Được sự trợ giúp chính từ: <span style="color: green;">Visual Studio Code</span>
+            </div>
+            <div style="
+            position: absolute;
+            font-size: 20px;
+            display: inline-block;
+            ">
+            <div style="
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: -88px;
+            margin-left: 80px;
+            ">Mạng xã hội</div>
+            </div>
+            <div style="
+            position: absolute;
+            display: inline-block;
+            margin-top: -22px;
+            margin-left: 65px;
+            ">
+                <div class="footer_social_img_link" id="youtube_image_link" title="Youtube"></div>
+                <div class="footer_social_img_link" id="tiktok_image_link" title="TikTok"></div>
+            </div>
+            </div>
+        <img id="footer_image_logo" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+    </footer>
+</body>
+
+<script type="text/javascript" src="..."></script>
+<script type="text/javascript" src="shared_file/shared.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCLEGNQXJN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCLEGNQXJN');
+</script>
+
+</html>

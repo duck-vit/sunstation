@@ -1,0 +1,622 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#introduce {
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fbgr_index.jpg?1648125950024");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 657px;
+    display: block;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* display: none; */
+}
+
+#text_introduce {
+    text-align: center;
+}
+
+#button_play {
+    background-color: rgb(100, 196, 255);
+    display: inline-block;
+    position: absolute;
+    padding: 15px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 50px;
+    margin-top: 116px;
+    margin-left: -62.03px;
+    border: 4px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#button_play:hover {
+    background-color: rgb(168, 222, 255);
+}
+
+#index {
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fbgr_main.jpg?1648125912757");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    position: fixed;
+    text-align: center;
+    padding-left: 175px;
+    padding-right: 175px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.choose_div {
+    border: 4px solid black;
+    width: 284px;
+    height: 266px;
+    background-color: chartreuse;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    line-height: 266px;
+    font-family: 'Signika', sans-serif;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.choose_div:hover {
+    background-color: rgb(119, 212, 25);
+}
+
+#index_tutorial {
+    background-color: white;
+    position: absolute;
+    margin-bottom: 142px;
+    margin-right: 37px;
+    padding: 5px;
+    bottom: 0px;
+    right: 0px;
+    width: 470px;
+    height: 219px;
+    font-size: 20px;
+    line-height: 28px;
+    outline: 4px solid rgb(255, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+}
+
+#main {
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2Fbgr_main_2.png?1648125960478");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    text-align: center;
+    padding-top: 155px;
+    padding-left: 161px;
+    padding-right: 161px;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+#transparent {
+    background-color: transparent;
+    position: fixed;
+    margin-right: 108px;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 25px;
+}
+
+#header_main {
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.button_main {
+    position: fixed;
+    padding: 5px;
+    font-size: 18px;
+    top: 0;
+    right: 0;
+    margin-right: 265px;
+    margin-top: 94px;
+}
+
+#button_main_2 {
+    display: none;
+}
+
+#button_show_gift {
+    background-color: rgb(106, 200, 255);
+    position: absolute;
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 215px;
+    margin-right: 176px;
+    font-family: 'Quicksand';
+    font-size: 40px;
+    padding-top: 43px;
+    text-align: center;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+#button_show_gift:hover {
+    background-color: rgb(145, 215, 255);
+}
+
+#give_gift {
+    background-color: skyblue;
+    position: absolute;
+    outline: 3.5px solid black;
+    padding-top: 5px;
+    padding-left: 20px;
+    height: 567px;
+    width: 709px;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+#un_img {
+    text-align: center;
+    float: left;
+    display: none;
+}
+
+#TTHV_img {
+    text-align: center;
+    margin-left: 30px;
+    float: left;
+    display: none;
+}
+
+#fun_audio {
+    float: left;
+    display: none;
+}
+
+#gift_un_img {
+    width: 70px;
+}
+
+#gift_un_img:hover {
+    opacity: 0.6;
+}
+
+#gift_TTVH_img {
+    width: 237px;
+}
+
+#gift_TTVH_img:hover {
+    opacity: 0.6;
+}
+
+#look_lucky_list {
+    background-color: yellow;
+    position: fixed;
+    padding-top: 161px;
+    padding-left: 8px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 176px;
+    display: none;
+}
+
+#result_money {
+    font-family: 'Patrick Hand', cursive;
+    color: lime;
+    font-size: 35px;
+}
+
+.img_lucky_money {
+    display: inline-block;
+    width: calc(100% / 7);
+    margin-right: 13px;
+    margin-bottom: 10px;
+}
+
+.img_lucky_money:hover {
+    opacity: 0.5;
+}
+
+.text_money {
+    color: rgb(51, 177, 255);
+    font-size: 22px;
+    font-family: monospace;
+    display: none;
+}
+
+#gift_collection {
+    background-color: yellow;
+    position: absolute;
+    padding-left: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+#un_zoom_img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    height: 657px;
+}
+
+#TTHV_zoom_img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    height: 657px;
+}
+
+#follow_page {
+    background-color: rgb(51, 177, 255);
+    position: absolute;
+    padding-left: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.text_about {
+    font-family: calibri;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.text_about_page {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.c_b {
+    display: inline-block;
+}
+
+.father_link_page {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.link_page:hover {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+#l {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+#button_schedule_game {
+    position: absolute;
+    font-size: 20px;
+    padding: 3px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+
+
+
+
+#schedule_game {
+    display: none;
+}
+
+.bonus_button {
+    background-color: orange;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    font-size: 23px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 40px;
+    cursor: default;
+}
+
+.bonus_button:hover {
+    background-color: rgb(235, 152, 0);
+}
+
+.bonus_subjects {
+    background-color: papayawhip;
+    position: fixed;
+    display: none;
+    height: 609px;
+    width: 651px;
+    padding-right: 113px;
+    margin-top: 40px;
+    margin-right: 8px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.bonus {
+    position: fixed;
+    display: none;
+}
+
+.bonus_button:hover > .bonus_subjects {
+    display: block;
+}
+
+.return {
+    background-color: cyan;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 12px;
+    border-radius: 6px;
+    width: 92px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}
+
+#scd_introduce {
+    background-color: #f44234;
+    padding-bottom: 138px;
+}
+
+#channel_name {
+    width: 260px;
+    margin-top: -11px;
+    display: block;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game_name {
+    width: 520px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+#mean_game_name {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#play_button {
+    background-color: yellow;
+    width: 157px;
+    height: 58px;
+    display: block;
+    margin-top: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 46px;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+#play_button:hover {
+    background-color: rgb(255, 183, 0);
+    border: 3px solid rgb(66, 66, 66);
+}
+
+.man {
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 657px;
+    display: none;
+}
+
+.title {
+    text-align: center;
+    font-family: cursive;
+    font-size: 35px;
+    font-weight: 500; /**/
+}
+
+.schedule {
+    outline: 2px solid black;
+    display: inline-block;
+    width: 686px;
+    height: 317px;
+    margin-left: 15px;
+}
+
+.random_1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTKB_1.png?1648126025208");
+}
+
+.random_2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTKB_2.png?1648126029542");
+}
+
+.random_3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTKB_3.png?1648126031382");
+}
+
+.random_4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTKB_4.png?1648126034059");
+}
+
+.random_5 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/thumbnails%2FTKB_5.png?1648126038969");
+}
+
+.request {
+    background-color: cyan;
+    display: inline-block;
+    position: absolute;
+    border: 3px solid black;
+    padding-left: 20px;
+    margin-left: 13px;
+    font-family: cursive;
+    font-size: 25px;
+    line-height: 32px;
+    width: 640px;
+    height: 40px;
+}
+
+.father-drag_subjects {
+    background-color: cornsilk;
+    position: absolute;
+    display: inline-block;
+    padding-left: 49px;
+    margin-top: 44px;
+    margin-left: 6px;
+    width: 651px;
+    height: 556px;
+}
+
+.drag_subjects {
+    background-color: rgb(194, 255, 133);
+    display: inline-block;
+    border-radius: 16px;
+    outline: 3px solid black;
+    margin: 28px;
+    width: 126px;
+    height: 126px;
+}
+
+.subjects {
+    background-color: chartreuse;
+    position: absolute;
+    display: inline-block;
+    border-radius: 16px;
+    width: 126px;
+    height: 126px;
+    font-family: monospace;
+    text-align: center;
+    line-height: 63px;
+    font-size: 25px;
+}
+
+.subjects:hover {
+    background-color: rgb(105, 211, 0);
+}
+
+.t {
+    line-height: 126px;
+}
+
+.b {
+    background-color: rgba(152, 251, 152, 0);
+    outline: 3px solid rgba(0, 0, 0, 0);
+}
+
+.control {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    margin-top: 3px;
+    width: 690px;
+    height: 276px;
+    margin-left: 13px;
+}
+
+.drop_subjects {
+    display: inline-block;
+    background-color: rgb(128, 166, 238);
+    border-radius: 16px;
+    margin: 4px;
+    width: 126px;
+    height: 126px;
+}
+
+.father-button_end {
+    position: absolute;
+    width: 218px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+}
+
+.father-button_end:hover .button_end {
+    display: inline;
+}
+
+@keyframes fadeIn {
+    from {
+        margin-bottom: 0px;
+    } to {
+        margin-bottom: 20px;
+    }
+}
+
+.button_end {
+    background-color: rgb(151, 188, 255);
+    display: none;
+    position: absolute;
+    line-height: 30px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 16.5px;
+    font-weight: 600;
+    outline: 2px solid black;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    width: 92px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.button_end:hover {
+    background-color: rgb(94, 144, 236);
+}

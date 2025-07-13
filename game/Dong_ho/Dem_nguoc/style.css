@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: #FFA17F;
+     background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+     background: linear-gradient(to right, #00223E, #FFA17F);
+}
+
+#back_btn {
+  
+}
+
+.val {
+    background: transparent;
+    height: 40px;
+    font-size: 30px;
+    color: yellow;
+    text-align: center;
+    border: none;
+}
+
+/* .clock {
+    font-size: 40px;
+} */
+
+#clock {
+    margin-left: 176px;
+    font-size: 40px;
+}
+
+.button {
+    font-size: 13px;
+    background: yellow;
+    padding: 8px;
+    border: 3px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}

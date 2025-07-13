@@ -1,0 +1,39 @@
+* {
+    font-size: 30px;
+}
+
+#button {
+    font-size: 40px;
+}
+
+.lever {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    cursor: default;
+}
+
+.lever:hover {
+    background-color: aqua;
+}
+
+.div_choose {
+    cursor: pointer;
+    user-select: none;
+}
+
+.div_choose:hover {
+    background-color: yellow;
+}
+
+#color {
+    background-color: aqua;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.button_submit {
+    display: none;
+}

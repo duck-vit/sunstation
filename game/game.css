@@ -1,0 +1,35 @@
+
+#header_button_game {
+    border-bottom: 8px solid rgba(255,213,79,1.0000000000);
+}
+
+#father_content {
+    background-color: #f5f2f0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+#content {
+    margin: 0px 50px;
+}
+
+.sun_game_box {
+    font-family: 'roboto', sans-serif;
+    font-size: 28px;
+}
+
+.link_game {
+    color: black;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link_game:hover {
+    color: blue;
+    text-decoration: underline;
+}
