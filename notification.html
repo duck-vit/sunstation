@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notification/notification.css">
+    <link rel="stylesheet" href="shared_file/shared.css">
+    <link rel="shotcut icon" href="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <title>Status Sun Station</title>
+  
+  	<link rel="stylesheet" href="masonry.css">
+</head>
+  
+<style>
+    .link_a {
+				color: blue;
+      	word-wrap: break-word;
+      	text-decoration: none;
+    }
+  
+    .link_a:hover {
+				text-decoration: underline;
+    }
+  
+  	.notification_assets {
+        margin-top: 20px;
+        text-align: center;
+  }
+    .media {
+      	cursor: pointer;
+        height: 200px;
+    }
+    .btn_full_status {
+        width: 200px;
+        height: 200px;
+        font-size: 60px;
+      	cursor: pointer;
+        font-weight: 600;
+      	user-select: none;
+        line-height: 200px;
+      	vertical-align: top;
+        display: inline-block;
+				background-color: #00b3ff66;
+    }
+  
+    .notification_assets a {
+				text-decoration: none;
+    }
+  
+    .close_full_status {
+        top: 0;
+        right: 20px;
+        padding: 9px;
+      	cursor: pointer;
+        font-size: 26px;
+        margin-top: -2px;
+        line-height: 26px;
+        position: absolute;
+        border: 2px solid black;
+        background-color: #00b3ff66;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      	font-family: 'Fredoka', sans-serif;
+    }
+  
+  	.hidden {
+      	display: none;
+    }
+  
+    #ntfct_new .close_full_status {
+        background-color: white;
+    }
+</style>
+  
+<body>
+    <div id="father_content"></div>
+
+    <div id="content">
+<!--         <div id="text_title_notification">Các thông báo mới nhất của Sun Station:</div> -->
+      	
+        <div id="text_title_notification">Status mới:</div>
+<!--         <div id="result" style="
+        color: blue;
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        margin-bottom: 30px;
+        ">Status: 22</div> -->
+        
+        <div id="div_notification">
+          	<div class="notification_box" id="ntfct_new">
+                <div class="text_notification notification_date">16/7/2024</div>
+                <div class="text_notification notification_tille">Big game Thực Tế Mùa 2 sắp trở lại</div>
+                <div class="text_notification notification_content">
+                    Sau gần 1 năm không có thông tin gì mới, hiện nay chúng mình sẽ trở lại và đang có những chuẩn bị nhất định. Chắc hẳn các bạn vẫn còn nhớ series Big Game Thực Tế chúng mình đã thực hiện trong năm 2022 với 5 tập và 8 màn đầu tiên, năm nay mùa mới sẽ được trở lại tiếp tục với màn 9 và màn 10. Theo thông lệ mỗi mùa thì mình sẽ test năng lực của người chơi để có thể điều chỉnh độ khó cho phù hợp. Video đó đã được đăng trên kênh của chúng mình (Link: <a target="_blank" href="https://youtu.be/ZOOD9C1W8u8">https://youtu.be/ZOOD9C1W8u8</a>).<br><br>
+                    Mùa năm nay sẽ bao gồm 3 video trong đó 1 video là buổi test năng lực, 2 video còn lại là tập 6 và tập 7. Độ khó năm nay chắc chắn sẽ nâng cao hơn 1 chút và cũng sẽ thú vị hơn những tập đầu tiên. Thực ra chúng mình đã quay serie này từ giữa năm 2023 nhưng giờ mới trở lại hậu kì. Mùa 3 có thể sẽ ra mắt năm sau, nhưng cũng có thể sẽ không biết khi nào tiếp tục ghi hình vì còn bị phụ thuộc nhiều thứ.<br><br>
+                    Theo dự kiến, tập 6 và 7 sẽ được công chiếu đầu tiên trên kênh Youtube <a target="_blank" href="https://www.youtube.com/@gamethuctesunstation6002">Game Thực Tế</a>, sau đó đăng lần lượt trên kênh Youtube chính và website phim.
+                </div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">28/12/2023</div>
+                <div class="text_notification notification_tille">Video Đón Tết Quý Mão tập 2 sắp ra mắt</div>
+                <div class="text_notification notification_content">
+                    Chỉ còn vài ngày nữa thôi là năm 2023 dương lịch sẽ đi qua để đón chào một năm mới đầy hứa hẹn, năm 2024. Năm nay, chúng mình cũng ra khá ít video và dự án do bận nhiều việc, cộng với những sự cố nho nhỏ nên chưa thể thực hiện tiếp được. Và gần đây, sau khi đã khắc phục được những khó khăn, chúng mình đã bắt tay ngay vào làm. Cuối cùng thì, sau gần 2 tuần edit chúng mình đã hoàn thành video Đón Tết Quý Mão tập 2 và đang chờ xuất bản. Mình nghĩ rằng so với các tập Đón Tết năm ngoái thì năm nay đã có rút nhiều kinh nghiệm và tránh bị kể lể dài dòng. Ở dự án video Đón Tết năm nay, chúng mình chia làm 2 tập. Tập 1 là video đầu tiên của năm và cũng đã được đăng từ rất lâu rồi. Tập này chỉ chủ yếu quay về những hoạt động cũng như không khí của nhà mình trước khi chuẩn bị đón Tết (Có lẽ phần nhiều là quay bé Ủn). Vào tập 2, năm nay chúng mình không chỉ quay nhiều hơn về không khí Tết ở trước và trong thời khắc Giao Thừa mà còn có giới thiệu cả một số hoạt động đầu năm, mặc dù chưa đầy đủ cho lắm.<br><br>
+                    Về lịch đăng, video Đón Tết Quý Mão 2023 tập 2 sẽ được đăng vào chiều ngày 31/12/2023 trên kênh Youtube Sun Station và website Sun Station Film của chúng mình. Các bạn hãy chờ đón xem năm nay cũng như truyền thống mọi năm của gia đình mình vào dịp Tết sẽ như thế nào nhé!
+                </div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">22/7/2023</div>
+                <div class="text_notification notification_tille">Chúc mừng sinh nhật Đức Quang!</div>
+                <div class="text_notification notification_content">
+                  	Tối hôm nay, bé Ủn và mọi người đã có một buổi sinh nhật mừng 4 tuổi rất vui vẻ và ấm cúng. Nhân dịp tuổi mới, chúc bé Ủn luôn ngoan ngoãn, nghe lời người lớn, và luôn phát huy tính hiếu kì nhé!<br><br>
+                  	Happy Birthday To You!
+              	</div>
+                <div class="text_notification notification_assets">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690040319275.jpg?v=1690042837748">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690040462170.jpg?v=1690042876222">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690041048757.jpg?v=1690042938933">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690039451961.jpg?v=1690042985558">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690038806374.jpg?v=1690043013650">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690039904297.jpg?v=1690043045324">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690041511639.jpg?v=1690043074264">
+                      	<img class="media" src="https://cdn.glitch.global/1bb2f326-b435-4269-9e9b-e9e8eae17ea6/KOLORO_1690043598468.jpg?v=1690043674575">
+                  			
+                  			<div class="close_full_status">X</div>
+<!--                   			<div class="btn_full_status" onclick="btn_full_status()">+0</div> -->
+                </div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">demo</div>
+                <div class="text_notification notification_tille">Status thử nghiệm</div>
+                <div class="text_notification notification_content">
+                  	Đây là thử nghiệm tính năng mới của chúng mình: tính năng Bài đăng Trạng thái (Status), hiện tại trên trang này chỉ đăng những thông báo gồm ngày tháng, đề mục và chữ nhưng từ giờ về sau sẽ đăng thêm ảnh và video. Phạm vi thông báo cũng sẽ lớn hơn. Block này sẽ được xóa khi mình làm xong tính năng Status.
+              	</div>
+              	<div class="text_notification notification_assets">                  
+                      <img class="media" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/z3113910308335_37e940457faf5dbe88d12259c90bc97e.jpg?v=1648125970411" alt="Image 1">
+                      <img class="media" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/MiNi%20Game%20Th%E1%BB%B1c%20T%E1%BA%BF.png?v=1655880349074" alt="Image 2">
+                      <video class="media" src="https://cdn.glitch.me/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/%C3%81nh%20L%C3%A0m%20Th%E1%BB%A7%20C%C3%B4ng_SUN%20STATION.mp4?v=1647332913085" controls></video>
+                      <img class="media" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/Cu%E1%BB%99c%20thi%20v%E1%BA%BD%20tranh%20_%20T%E1%BA%ADp%201.jpg?v=1649064208236" alt="Image 3">
+                  		<img class="media" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/img.png?v=1650702431406" alt="Image 4">
+                  		<img class="media" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/Thumnail.png?v=1649408768164" alt="Image 5">
+                  		
+                  		<div class="close_full_status">X</div>
+                  		<div class="btn_full_status" onclick="btn_full_status()">+10</div>
+              	</div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">7/7/2023</div>
+                <div class="text_notification notification_tille">Trang Blog mới của Sun Station</div>
+                <div class="text_notification notification_content">
+                  	Chúng mình đã kết thúc chuyến du lịch Đà Nẵng và sau khi về nhà đã lập một trang blog mới tên là Sun Station Blog. Hiện tại trang mới đăng một bài viết kể lại toàn bộ chuyến đi, các bạn có thể vào xem trang tại đây: <a class="link_a" target="_blank" href="https://sunstationor.blogspot.com/">https://sunstationor.blogspot.com</a>. Sun Station Blog được lập ra để chúng mình có thể chia sẻ thêm những khoảnh khắc, những câu chuyện hậu trường khi làm các video và dự án. Từ đó các bạn có thể biết một project của chúng mình được làm ra thế nào và đã phát triển ra sao.
+              	</div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">8/6/2023</div>
+                <div class="text_notification notification_tille">Những nền tảng hiện tại của Sun Station</div>
+                <div class="text_notification notification_content">
+                  	Sau thời gian hoạt động, chúng mình đã làm nhiều dự án và hoạt động trên những nền tảng khác nhau. Hôm nay chúng mình sẽ liệt kê những nơi đăng các dự án, thông tin, video, ảnh,... của Sun Station:<br><br>
+                  	1) <u style="color:red">Youtube:</u> Các kênh Youtube hiện đang hoạt động của chúng mình:<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@sunstation">Original Sun Station</a>: Kênh Youtube chính thức và cũng là kênh chính của chúng mình;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@sunstationfilm1166">Sun Station Film</a>: Kênh chuyên đăng những bộ phim của Sun Station, hiện tại vẫn còn có thể truy cập nhưng chúng mình không còn đăng được video, các bộ phim của Sun Station cũng được lưu trong Google Drive của tài khoản này;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@SunStationMoment">Sun Station Moment</a>: Kênh chuyên đăng những khoảnh khắc, kỉ niệm ngày xưa và hiện tại của chúng mình, sẽ có những video mà chúng mình chưa từng đăng và có thể sẽ không đăng trên các nền tảng khác, chúng mình cũng lưu các video và ảnh trên Google Drive;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@gamethuctesunstation6002">Game Thực Tế | SUN STATION</a>: Kênh Youtube đăng các video chơi game thực tế: giải câu đố, mật mã, thử thách,... Một số dự án như: Mini game Thực Tế, Big Game Thực Tế,...;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@unin227">Ủn Ỉn</a>: Kênh Youtube của bé Đức Quang (Ủn), đăng những video thường ngày của bé Ủn, các ảnh và một số video sẽ được lưu tại Google Drive;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.youtube.com/@videotransfer7872">Video Transfer</a>: Kênh đăng những video gốc, mới quay chưa qua cắt dựng chỉnh sửa, chủ yếu để phục vụ cho việc làm video và phát triển kênh của chúng mình.<br><br>
+                  	2) <u style="color:red">Website:</u> Các Website đã đi vào hoạt động của chúng mình:<br>
+                  	- <a class="link_a" target="_blank" href="https://tabby-eager-quark.glitch.me">https://tabby-eager-quark.glitch.me</a>: Chính là website mà các bạn đang xem thông báo. Đây là website điều hành kênh Sun Station, chúng mình đăng những thông báo, một số game, kịch bản phim, thỉnh thoảng có một bài viết;<br>
+                  	- <a class="link_a" target="_blank" href="https://sunstation-film.glitch.me">https://sunstation-film.glitch.me</a>: Là website chính của chúng mình, đăng các bộ phim và video nổi bật trên kênh Youtube Original Sun Station, hiện tại chỉ mới cập nhật các video từ năm 2022 và chúng mình sẽ còn cập nhật tiếp các năm trước đó. Website đã được chuyển từ địa chỉ https://quill-groovy-editor.glitch.me, bây giờ địa chỉ cũ dùng để lưu trữ các video và ảnh cho Website chính;<br>
+                  	- <a class="link_a" target="_blank" href="https://plant-jolly-house.glitch.me">https://plant-jolly-house.glitch.me</a>: Website giới thiệu các dự án hè của Sun Station;<br><br>
+                  	3) <u style="color:red">TikTok:</u><br>
+                  	- <a class="link_a" target="_blank" href="https://www.tiktok.com/@tiktoksun15">@tiktoksun15</a>: Kênh TikTok chính nhưng chúng mình không đăng video được, vì thế chuyển sang kênh mới là @tiktoksun60;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.tiktok.com/@tiktoksun60">@tiktoksun60</a>: Kênh TikTok chính mới của chúng mình, hiện đang hoạt động;<br>
+                  	- <a class="link_a" target="_blank" href="https://www.tiktok.com/@fanamu10">@fanamu10</a>: Kênh nhảy nhót theo nhạc của Ánh.
+              	</div>
+            </div>
+          	<div class="notification_box">
+                <div class="text_notification notification_date">5/6/2023</div>
+                <div class="text_notification notification_tille">Dự định của chúng mình trong năm 2023</div>
+                <div class="text_notification notification_content">
+                  	Sau hơn 4 tháng không có bất kì động thái gì thì vào ngày 2/6 chúng mình đã đăng video <a class="link_a" href="https://www.youtube.com/watch?v=1Y6BWDvAXqw" target="_blank">Đón Tết Quý Mão 2023 tập 1</a>. Đây là những dự định của chúng mình cho kênh Sun Station trong năm 2023:<br>
+                  	- Hoàn thành các dự án còn dang dở: Big Game Thực Tế, các dự án Website;...<br>
+                  	- Chỉnh sửa và đăng lại một số video cũ còn giữ được;<br>
+                  	- Hoàn thiện tiếp các video Du lịch Nha Trang (Cố gắng xong trước 15/7);<br>
+                  	- Năm nay sẽ có Video Du lịch Đà Nẵng, sự trở lại Đà Nẵng của chúng mình sau 5 năm;<br>
+                  	- Hoàn thiện kịch bản và quay tiếp Gia Đình PoPo Ngoại truyện;<br>
+                  	- Đưa thêm các tính năng mới và sửa đổi những nhược điểm trên các Website và kênh Youtube;<br>
+                  	- Ra mắt các Website đang làm ở hiện tại;...<br>
+                  	Năm nay có thể sẽ không sôi nổi và có nhiều dự án mới như năm ngoái nữa, tuy nhiên chúng mình sẽ chú tâm vào chất lượng hơn. Vì thế thời gian hậu kì cũng sẽ nhiều hơn.
+              	</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">2/1/2023</div>
+                <div class="text_notification notification_tille">Video 1 Tập 3 đang chờ hoàn thiện</div>
+                <div class="text_notification notification_content">Phần mềm chỉnh sửa Video của mình hiện tại không thể xuất được Video mà chúng mình đã hậu kì xong nên mình đang tìm cách sửa chữa. Tập 3 lần này sẽ kể về một ngày của chúng mình tại VinPearl, trong đó Video 1 là buổi sáng của chúng mình tại khách sạn và đi tới VinPearl, Video 2 dự định sẽ là tham quan là chơi các trò chơi. Chúng mình chưa thể hậu kì được Video 2 do các video quay được đều lưu ở trong một máy tính khác mà máy tính này đang bị hỏng nên chưa thể chuyển các Video sang máy tính hiện tại được. Video 1 của tập 3 sẽ được Phát hành vào ngày 8/2/2023 nếu có thể khắc phục được vấn đề. Hẹn các bạn ở video tiếp theo nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">6/11/2022</div>
+                <div class="text_notification notification_tille">Sắp có video Du lịch Nha Trang Tập 2 Video 2</div>
+                <div class="text_notification notification_content">Video 2 Tập 2 Du lịch Nha Trang hiện tại của chúng mình sau gần 1 tháng Edit, chỉnh sửa thì cũng đã vừa hoàn thành cách lúc mình viết thông báo này ít phút. Chúng mình đang thực hiện những bước cuối cùng để test, tìm lỗi hình ảnh và âm thanh để cho ra một sản phẩm chỉn chu nhất có thể. Dự định sẽ đăng ngày 15/11/2022 trên Youtube Sun Station và Website Sun Station Film, có thể sẽ sớm hơn. Hãy cùng đón chờ nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">26/9/2022</div>
+                <div class="text_notification notification_tille">Series Du lịch Nha Trang trở lại</div>
+                <div class="text_notification notification_content">Tập 2, Video 1 của Du lịch Nha Trang mình đã hoàn thành vào hôm nay nên có thể sẽ đăng vào lúc nào đó từ ngày 27 đến 30/09/2022. Hôm trước thực ra chúng mình cũng đã edit xong tập này, nhưng do có một số vấn đề về xuất video nên đã bị mất một đoạn dài. Đến bây giờ mới edit xong nên mới đăng được. Tập 1 cũng đã ra mắt nhưng mới là sự chuẩn bị vào ngày hôm trước khi đi. Video 2 Tập 2 có lẽ cũng sắp ra mắt rồi! Các bạn đón chờ xem những ngày du lịch ở Nha Trang của chúng mình sẽ có những thú vị gì nha!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">30/7/2022</div>
+                <div class="text_notification notification_tille">Sắp có video Một Ngày Của Bé Ủn</div>
+                <div class="text_notification notification_content">Sau 8 ngày kể từ khi quay xong Video 1 ngày Sinh nhật của Ủn thì đến hôm nay chúng mình mới hậu kì xong Video Một Ngày Của Bé Ủn. Sinh nhật của Ủn năm 2022 sẽ gồm 2 video: 1 ngày của Ủn và Buổi tối sinh nhật của Ủn. Dự kiến Một Ngày Của Ủn sẽ có trước và đăng vào ngay buổi tối ngày hôm nay. Video Buổi Tối Sinh Nhật Ủn sẽ đăng vào lúc nào với có thay đổi lịch đăng không thì chúng mình sẽ thông báo sau.</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">21/7/2022</div>
+                <div class="text_notification notification_tille">Sinh nhật của bé Ủn</div>
+                <div class="text_notification notification_content">Sinh nhật bé Ủn đã luôn được tổ chức hàng năm vào ngày 22/7, từ lúc Ủn đầy năm đến giờ. Mai sẽ là ngày sinh nhật thứ 3 của bé Ủn nghịch ngợm. Nhân dịp này mình sẽ làm một video về Một Ngày Của Ủn nha! Do gần đây có một số trục trặc về sản xuất video nên chúng mình không ra video nhiều như trước kia nữa. Mình vẫn đang cố gắng khắc phục lỗi để ra video đều đặn hơn. Các bạn hãy đón xem ngày sinh nhật của bé Ủn sẽ như thế nào nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">9/6/2022</div>
+                <div class="text_notification notification_tille">Website Phim mới của Sun Station</div>
+                <div class="text_notification notification_content">Để bù đắp lại thiếu sót kênh Youtube Sun Station Film không còn hoạt động nữa thì chúng mình đã ra mắt một Website mới chuyên đăng những bộ phim hoặc truyện ngắn của chúng mình tại link: <a class="link_a" href="https://quill-groovy-editor.glitch.me/" target="_blank">https://quill-groovy-editor.glitch.me/</a>, các bạn hãy ghé thăm nhé! Nhân tiện đây, mình cũng xin thông báo là kênh Youtube Phim của chúng mình chưa thật sự mất, nếu vào thời điểm hiện tại, các bạn truy cập vào kênh thì vẫn thấy kênh đang bình thường nhưng thực ra chúng mình đã mất quyền kiểm soát kênh từ ngày đăng thông báo ở dưới thông báo này rồi. Chúng mình vẫn đang tìm những video phim, truyện còn lưu trong máy để đăng lên Website. Mong các bạn ủng hộ những bộ phim của chúng mình để chúng mình hoàn thiện Website trở nên tốt hơn nhé!</div>
+            </div>
+<!--             <div class="notification_box">
+                <div class="text_notification notification_date">4/6/2022</div>
+                <div class="text_notification notification_tille">
+                    <span style="color: red">SOS!</span> Giải cứu kênh Youtube Sun Station!
+                </div>
+                <div class="text_notification notification_content">
+                ( ~ Nội dung thông báo này đã bị xóa do vi phạm nguyên tắc của Sun Station ~ )<br>
+                ( ~ Thông báo này sẽ sớm được xóa khỏi trang ~ )
+                Chỉ sau đúng 13 ngày hoạt động, kể từ khi lập kênh, kênh Youtube Sun Station Film, chuyên đăng những bộ phim, chuyện ngắn của chúng mình chính thức bị khai tử. Hiện tại vẫn chưa rõ lý do nhưng nguyên lí có thể đã giống cách kênh Youtube cũ của chúng mình mất. Không chỉ thế, cách đây một khoảng thời gian ngắn (Mình không nhớ nữa), kênh Youtube MiKi & Cherry của Ánh và Chíp cũng đã mất.
+                Không hiểu do vi phạm chính sách của Google hay là do tâm link mà gần đây chúng mình liên tục bị mất tài khoản Google, trùng hợp, thời gian "sống" của Youtube Sun Station Film lại trùng với thứ tự thông báo sinh ra của nó, tức là chiếc thông báo mới lập Youtube Sun Station cũng là thông báo thứ 13 trên trang Thông Báo, trùng với ngày nó hoạt động.
+                Kể từ thông báo đầu tiên. Mất hơn 3 tài khoản chỉ trong thời gian gần 4 tháng mà không rõ lí do. Có thể vào một ngày đẹp trời không xa nào đó, kênh Youtube Sun Station của chúng mình cũng sẽ bị "bốc hơi". Nên bây giờ, chúng mình sẽ vừa đăng video lên Youtube, vừa đăng lên Website Chính Sun Station nhé! Không thì bao công sức, kỉ niệm trong các video lại mất hết thôi!
+                </div>
+            </div> -->
+            <div class="notification_box">
+                <div class="text_notification notification_date">22/5/2022</div>
+                <div class="text_notification notification_tille">Kênh Youtube mới của Sun Station</div>
+                <div class="text_notification notification_content">Hôm nay, mình vừa mới tạo một kênh Youtube mới có tên là Sun Station Film. Chuyên đăng những bộ phim, chuyện ngắn mà chúng mình quay, link là: <a class="link_a" href="https://www.youtube.com/channel/UCyJnpTsqMlCE1cGlRgrPr3w">https://www.youtube.com/channel/UCyJnpTsqMlCE1cGlRgrPr3w</a></div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">20/5/2022</div>
+                <div class="text_notification notification_tille" title="Hello Summer!">Xin chào Mùa Hè!</div>
+                <div class="text_notification notification_content">
+                Vậy là cuối cùng, chúng mình cũng đã nghỉ hè. Đây chắc chắn sẽ là thời gian thực hiện những dự án chúng mình đã định làm hoặc đang còn giang dở. Chắc chắn mùa hè này sẽ ra mắt nhiều thứ thú vị và đáng mong đợi. Chúng mình vẫn đang tích cực chuẩn bị nên không thường xuyên đăng video lên kênh, cứ vài ngày mới đăng 1 video. Dưới đây là các kế hoạch của kênh trong đầu mùa hè này:<br>
+                - Có thể sẽ không đăng video mỗi ngày như năm ngoái mà chỉ đăng 2 ngày 1 video;<br>
+                - Dự tính Gia Đình PoPo ngoại truyện sẽ ra mắt vào ngày 1/6/2022;<br>
+                - ...
+                </div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">13/5/2022</div>
+                <div class="text_notification notification_tille">Kịch bản Gia Đình PoPo phần 2 đang được hoàn thiện</div>
+                <div class="text_notification notification_content">Hiện tại, chúng mình đang từng bước hoàn thiện những bước cuối cùng của kịch bản phim Gia Đình PoPo phần 2. Cả về trang phục, đạo cụ, máy quay,... đều đang được chuẩn bị rất kĩ lưỡng. Chúng mình cũng xin bật mí một vài thứ của bộ phim lần này. Nhìn chung, không có quá nhiều điểm kịch tính và hấp dẫn, kịch bản chỉ xoay quanh 2 vấn đề chính. Nhưng thú vị hơn nhiều phần 1. Ở phần 2 này chúng mình sẽ đào sâu hơn về gia đình của 3 chị em cũng như những câu chuyện mà những nhân vật này đang gặp phải trong thời gian những ngày tháng 5 - tháng nghỉ hè, kết thúc một năm học. Thời gian là hè thì sẽ có nhiều điều để kể, khám phá hơn về các câu chuyện của nhân vật. Lần làm phim này sẽ chuyên nghiệp hơn, thời lượng phim dài hơn. Độ dài của phim ước tính theo kịch bản sẽ là hơn 50 phút, gấp hơn 2 lần phần 1, đây sẽ là thời lượng phim dài nhất từ trước đến giờ, dài nhất trong tất cả các bộ phim mà chúng mình đã làm. Cho nên thời gian làm phim sẽ rất lâu; nếu chúng mình vẫn giữ tiến độ như lần trước thì tiến độ sẽ bị chậm lên tới 1 tháng 14 ngày (44 ngày), không tính số ngày bị phát sinh. Chúng mình luôn cố gắng hoàn thiện kĩ năng làm phim từng bước qua từng bộ phim. Nên mỗi một bộ phim mới được sản xuất cũng đều là những tâm huyết, phát triển từng ít của Sun Station. Các bạn hãy ủng hộ, like và đăng kí kênh để giúp chúng mình có thêm động lực phát triển, tiến bộ hơn nữa trong các bộ phim nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">7/5/2022</div>
+                <div class="text_notification notification_tille">Sun Station sắp trở lại</div>
+                <div class="text_notification notification_content">Chào các bạn! Thông báo này hiện lên trên trang là để thông báo cho các bạn biết chúng mình sắp trở lại với kênh, sau 1 tuần nghỉ Youtube thì chúng mình sẽ trở vào một ngày đẹp trời với 1 video comback hay. Các bạn hãy đón xem video của chúng mình trên kênh Youtube và 1 thông báo các dự định mới nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">30/04/2022</div>
+                <div class="text_notification notification_tille">Các kế hoạch của Sun Station sắp tới</div>
+                <div class="text_notification notification_content">Vậy là cũng đã hơn 2 tuần chúng mình chưa có bất kì thông báo nào trên trang này. Thời gian này đang là khoảng thời gian để chúng mình ôn tập kiểm tra cuối năm học, nên tạm dừng hoạt động trên kênh một thời gian, đến khi nào mọi việc đã xong xuôi thì chúng mình mới có thể làm tiếp được. Và đây là một số dự định chúng mình sẽ định làm sau khi kiểm tra xong:<br>
+                  - Làm một số dự án website nho nhỏ như: Công cụ tính toán chuyển đổi đơn vị,...;<br>
+                  - Lên ý tưởng, kịch bản và quay phần ngoại truyện của bộ phim Gia Đình PoPo;<br>
+                  - Hoàn thành những bước kiểm tra cuối cùng của kịch bản phim Gia Đình PoPo phần 2 sắp quay;<br>
+                  - Chuẩn bị chân quay, bộ nhớ, một số đạo cụ cơ bản cho Gia Đình PoPo phần 2;<br>
+                  - Tập trung vào làm video, vlog,... trau chuốt và kĩ càng hơn;<br>
+                  - Sửa lỗi và thêm một số tính năng mới cho website Sun Station, hoàn thiện các thành phần để sẵn sàng đi vào hoạt động chính thức;<br>                - Tiếp tục đăng lại lên kênh Youtube mới những video còn giữ được trong máy mà đã đăng trên kênh cũ, và đăng tiếp những video đã quay nhưng chưa đăng lên kênh cũ;<br>
+                  <div style="display:inline-block;text-indent:23px">T</div>ất nhiên những kế hoạch này chỉ là một số kế hoạch chúng mình đã nghĩ ra đầu tiên thôi, còn rất nhiều kế hoạch nữa chưa nghĩ ra. Đến lúc mọi việc xong xuôi thì chúng mình sẽ làm nhiều hơn những kế hoạch đã đặt ra bây giờ. Các bạn nhớ theo dõi nhé! Hẹn các bạn vào một thời gian không xa.
+              </div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">14/04/2022</div>
+                <div class="text_notification notification_tille" title="Hưỡng dẫn này sẽ được cập nhật trên trang hướng dẫn sử dụng Website Sun Station">Cách xem các thông tin trong phần mô tả ở mỗi video đăng lại</div>
+                <div class="text_notification notification_content">Như thông báo ngày 11/4, chúng mình sẽ đăng lại một số video đã đăng ở kênh cũ lên kênh Youtube mới, trong đó có các bộ phim. Mình chỉ có thể đăng một số video vẫn còn trong máy. Trong phần mô tả video cũ đã và sẽ đăng trên kênh, chúng mình đều ghi lại ở phần đó những thông tin xuất bản của video. Thông báo đó có dạng như thế này: <span style="color:blue">(14) [2020-08-09 11:03:11 UTC - 2021-09-07 04:00:13 UTC]</span>. Trong đó, <span style="color:blue">(14)</span> là thứ tự của video đó từ khi đăng video đầu tiên, ở ví dụ đây là video thứ 14 trên kênh cũ. <span style="color:blue">[2020-08-09 11:03:11 UTC - 2021-09-07 04:00:13 UTC]</span> ; Đây là khung đánh dấu dòng thời gian tạo và đăng lên Youtube của video; trong đó, phía bên trái dấu gạch ngang là thời điểm tạo, bên phải dấu gạch ngang là thời điểm xuất bản lên Youtube, đủ ngày tháng năm, số giờ phút giây (Theo giờ UTC, giờ tiêu chuẩn quốc tế). Tùy vào mỗi video mà các thông tin trong ngoặc tròn và vuông cũng khác nhau. Phần thời gian đăng bên phải gạch ngang thì luôn đúng nhưng bên trái thì có thể ở phần lớn video sẽ không chính xác thời điểm video được tạo ra mà có thể chỉ là thời điểm video được xuất lại. Những video nào chỉ có 1 khoảng thời gian mà không có dấu gạch ngang hay thời điểm còn lại thì thời điểm trong ngoặc vuông đó là thời điểm tạo của video.</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">11/04/2022</div>
+                <div class="text_notification notification_tille">Các bộ phim sắp được cập nhật trên kênh Youtube</div>
+                <div class="text_notification notification_content">Chúng mình đã quyết định chọn kênh Original Sun Station làm kênh chính mới nên kênh chỉ mới đăng được 16 video. Chắc chắn rằng vào một thời gian nào đó chúng mình sẽ cập nhật thêm một số video và những bộ phim đã quay. Nếu các bạn muốn xem những bộ phim đó ngay cả khi chúng chưa được đăng trên Youtube thì ngay tại Website chủ của Kênh, các bạn nhấn vào mục <span style="color: blue">Phim</span> trên thanh Điều Hướng và lướt xuống dưới để xem nhé!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">09/04/2022</div>
+                <div class="text_notification notification_tille">Hậu trường phim Gia Đình PoPo Phần 1 đang dần được hoàn thiện</div>
+                <div class="text_notification notification_content">Mặc dù Phim Gia Đình PoPo phần 1 đã hoàn thành lâu rồi nhưng đến hiện tại mình mới có thể ra hậu trường. Cũng vì khi làm xong chúng mình phải dành thời gian nghỉ ngơi sau 1 thời gian quay và xem lại thành phẩm đã làm được. Rồi sau đó chúng mình cũng quên mất làm Hậu Trường. Và mãi tới nay, mình mới lục lại đống video gốc đã quay và phát hiện vẫn còn 1 vài video Phim chưa bị thất lạc. Ở tập Hậu trường lần này sẽ đầy đủ hơn các Hậu trường phim khác. Có 1 điều chúng mình rất tiếc vì ở Tập 3, trong khi ghép các đoạn phim nhỏ thành một bộ hoàn chỉnh, mình đã bị sót 1 cảnh quay mà mình nghĩ nó là khá quan trọng đối với mạch của bộ phim. Mà không hiểu tại sao lúc xem lại phim chúng mình lại không để ý thiếu sót đó. Nên sắp tới chúng mình cũng sẽ chỉnh sửa và đăng phần đó. Hiện tại mình đang tìm những video Hậu Trường để ghép lại thành video hoàn chỉnh. Mình nghĩ sẽ có sớm thôi!</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">07/04/2022</div>
+                <div class="text_notification notification_tille">Sắp có video hậu trường Vlog Tết 2022</div>
+                <div class="text_notification notification_content">Chiều ngày hôm nay mình đã đăng xong video Vlog Tết tập 3. Và sắp tới mình sẽ đăng tiếp video hậu trường của tập 3 luôn. Lí do tập 1 và 2 không có hậu trường là vì cả 2 tập này đều chỉ quay các hoạt động của mọi người nên không có gì để kể về hậu trường. Còn tập 3 có chèn 1 số cảnh là đã lên ý tưởng quay nên cần phải có hậu trường.</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">04/04/2022</div>
+                <div class="text_notification notification_tille">Video Vlog Tết đã được chỉnh sửa xong</div>
+                <div class="text_notification notification_content">Cụ thể, video Tết tập 2 đã hoàn thành ngày 17/2/2022, tập 3 hoàn thành ngày 21/3/2022. Mình sẽ đăng 2 tập này trong thời gian sớm nhất. Dù đã quay xong hơn 1 tháng rồi nhưng đến thời gian này mình mới chỉnh sửa xong chúng. Hứa hẹn tập 2 và tập 3 sẽ dài hơn tập 1 và chất lượng hơn. Riêng tập 3 được đầu tư kĩ hơn về hình ảnh, âm thanh, nội dung. Vì làm video mục đích chính để lưu giữ kỉ niệm nên video sẽ bị kéo dài và có phần cồng kềnh hơn so với các video thường ngày chúng mình quay. Các thông tin khác sẽ được nêu ở phần mô tả của video trên Youtube. Đây là link của 3 video:<br>
+                Tập 1: <a class="link_video_tet" href="https://youtu.be/EJl2MXsL4I0" target="_blank">https://youtu.be/EJl2MXsL4I0</a><br>
+                Tập 2: <a class="link_video_tet" href="https://youtu.be/-d39OLbsYhM" target="_blank">https://youtu.be/-d39OLbsYhM</a><br>
+                Tập 3: <a class="link_video_tet" href="https://youtu.be/DbB5P3QGguc" target="_blank">https://youtu.be/DbB5P3QGguc</a>
+                </div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">01/04/2022</div>
+                <div class="text_notification notification_tille">Website Sun Station sẽ hoàn thành trong 1 thời gian ngắn nữa</div>
+                <div class="text_notification notification_content">Trước hết, Xin khẳng định, đây không phải là lời nói dối ngày Cá Tháng Tư. Mình cảm thấy Website đã gần như là đủ các chức năng, nếu có thêm chức năng gì thì mình sẽ thông báo. Hiện tại mình đang đăng thêm nội dung cho các trang Video, Ảnh, Phim,....</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">30/03/2022</div>
+                <div class="text_notification notification_tille">Website Sun Station đã có thể theo dõi một số thông tin người dùng</div>
+                <div class="text_notification notification_content">Ngày đăng kí Google Analytics: 29/03/2022</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">22/03/2022</div>
+                <div class="text_notification notification_tille">Kênh Youtube chính đã đổi địa chỉ</div>
+                <div class="text_notification notification_content">Do tài khoản kênh bị mất nên kênh Youtube của SUN STATION cũng bị xóa, tất cả video đều bị mất, chỉ có thể kịp lưu về một số video. Hiện tại, chúng mình đã chuyển sang kênh Youtube mới tên là Sun Station Original. Mình sẽ cố gắng hoàn thiện kênh mới để sớm ra video. Mong các bạn vẫn luôn ủng hộ chúng mình! Có điều gì mới mình sẽ thông báo ở trang này.</div>
+            </div>
+            <div class="notification_box">
+                <div class="text_notification notification_date">15/03/2022</div>
+                <div class="text_notification notification_tille">Thông báo demo</div>
+                <div class="text_notification notification_content">Có một chàng hoàng tử ngày đêm nhớ nhung rằng bàn phím không sửa được phải nhờ thợ đến sửa cho nàng công chúa ngủ trong rừng mãi không chịu dậy, mẹ công chúa đi chợ về mua cho công chúa một rổ khoai lang nướng làm công chúa thích mê. Thấy thế, hoàng tử chạy lại xin nhưng công chúa và mẹ không cho, chàng liền chạy lại gốc cây và khóc to, ông bụt hiện lên không những không dỗ dành hoàng tử mà lại chạy lại ăn cùng với hai mẹ con công chúa.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <div id="header_introduce">
+            <div id="header__text--name_web">Status</div>
+            <div id="header_navigation_bgr"></div>
+            <div id="header_navigation">
+                <div id="header_menu_icon" title="Menu">☰
+                    <div id="header_menu_box">
+                        <div class="header_menu_items" id="navigation_button" title="Điều hướng cho điện thoại">Điều hướng</div>
+                        <div class="header_menu_items" id="account_button" title="Tài khoản">Tài khoản</div>
+                        <div class="header_menu_items" id="tutorial_button" title="Hướng dẫn sử dụng Website">Hướng dẫn</div>
+                        <div class="header_menu_items" id="sign_up_button" title="Đăng kí">Đăng kí</div>
+                        <div class="header_menu_items" id="feedback_button" title="Phản hồi của bạn tới Sun Station">Phản hồi</div>
+                    </div>
+                </div>
+                <a id="link_header_logo" href="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013" target="_blank">
+                    <img id="header_logo" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+                </a>
+                <div id="header_home_name">Sun Station</div>
+                <img id="header_button_search" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_search_icon.png?v=1647326975141" title="Tìm kiếm">
+                <img id="header_button_search_hide" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_search_icon.png?v=1647326975141" title="Ẩn Tìm kiếm">
+                <a href="film.html" class="header_button_navigation" id="header_button_film_script">Phim</a>
+                <a href="post.html" class="header_button_navigation" id="header_button_posts">Bài viết</a>
+                <a href="image.html" class="header_button_navigation" id="header_button_image">Ảnh</a>
+                <a href="video.html" class="header_button_navigation" id="header_button_video">Video</a>
+                <a href="game.html" class="header_button_navigation" id="header_button_game">Trò chơi</a>
+                <div class="header_button_navigation" id="header_button_notification">Thông báo</div>
+                <a href="index.html" class="header_button_navigation" id="header_button_home">Trang chủ</a>
+            </div>
+            <div id="header_search_box">
+                <input id="header_input_search" type="search" placeholder="Tìm kiếm...">
+                <div id="header_button_search_submit">
+                    <img id="header_img_button_search_submit" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/icon-v.png?v=1647326979830">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div id="footer_content">
+            <div id="footer_text_title_name">Sun Station</div><br>
+            <span id="link_channel" style="
+            font-size: 20px;
+            cursor: default;
+            transition: 0.1s;
+            ">tabby-eager-quark.glitch.me</span><br><br>
+            <div style="
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: 600;
+            display: inline-block;
+            ">Thông tin website</div><br>
+            <div style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            line-height: 30px;
+            display: inline-block;
+            ">Kênh: <span style="color: green;">Sun Station</span><br>
+            Chức năng Website: <span style="color: green;">Điều hành các hoạt động của kênh</span><br>
+            Ngày bắt đầu làm website: <span style="color: green;">6/3/2022 (Chủ Nhật)</span><br>
+            Giao diện: <span style="color: green;">Lấy ý tưởng từ </span><span style="color:rgb(0, 114, 228)">Google sites</span><br>
+            Được sự trợ giúp chính từ: <span style="color: green;">Visual Studio Code</span>
+            </div>
+            <div style="
+            position: absolute;
+            font-size: 20px;
+            display: inline-block;
+            ">
+            <div style="
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: -88px;
+            margin-left: 80px;
+            ">Mạng xã hội</div>
+            </div>
+            <div style="
+            position: absolute;
+            display: inline-block;
+            margin-top: -22px;
+            margin-left: 65px;
+            ">
+                <div href="https://www.youtube.com/channel/UCVOoUEQaFXVblY6wF1vg_WQ" class="footer_social_img_link" id="youtube_image_link" title="Youtube"></div>
+                <div class="footer_social_img_link" id="tiktok_image_link" title="TikTok"></div>
+            </div>
+            </div>
+        <img id="footer_image_logo" src="https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/sun_station_logo.png?v=1647326957013">
+    </footer>
+</body>
+
+<script type="text/javascript" src="shared_file/shared.js"></script>
+<script type="text/javascript" src="notification/notification.js"></script>
+<script>
+document.getElementById("tutorial_button").onclick = function() {
+    window.location = "/sunstation/post/tutorial/Cach-su-dung-website-chinh-cua-sun-station.html";
+}
+
+document.getElementById("account_button").onclick = function() {
+    window.location = "/sunstation/user/account/account.html";
+}
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCLEGNQXJN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCLEGNQXJN');
+  
+document.getElementById("navigation_button").onclick = function() {
+    window.location = "/sunstation/navigation";
+}
+</script>
+  
+<script>  
+    const childDivs = document.querySelectorAll('.btn_full_status');
+      var title = document.querySelector('.notification_tille');
+    
+    childDivs.forEach(div => { 
+        div.addEventListener('click', () => { 
+        const parentDiv = div.closest('.notification_box'); 
+        parentDiv.style.position = 'fixed'; 
+        parentDiv.style.top = '0'; 
+        parentDiv.style.bottom = '-30px'; 
+        parentDiv.style.left = '0'; 
+        parentDiv.style.right = '0'; 
+        parentDiv.style.zIndex = '100'; 
+        parentDiv.style.border = 'none'; 
+        parentDiv.style.borderRadius = '0'; 
+        parentDiv.style.padding = '28px 47px'; 
+        parentDiv.style.overflow = 'auto'; 
+        title.style.color = 'red';
+
+        // Hiển thị `.close_full_status` 
+        const closeBtn = parentDiv.querySelector('.close_full_status'); 
+        closeBtn.style.display = 'block'; 
+
+        // Xử lý sự kiện nhấn vào `.close_full_status` 
+            closeBtn.addEventListener('click', () => { 
+                parentDiv.style.position = 'relative'; 
+                parentDiv.style.zIndex = '-1'; 
+                parentDiv.style.border = '3px solid cornflowerblue'; 
+                parentDiv.style.borderRadius = '20px'; 
+                parentDiv.style.padding = '15px';
+                title.style.color = 'black';
+
+                closeBtn.style.display = 'none';
+            }); 
+        });
+    });
+
+
+  
+  
+//   	document.querySelector('.btn_full_status').addEventListener('click', function(event) {
+//       var parent = this.parentNode;
+//       var title = document.querySelector('.notification_tille');
+
+//       parentDiv.style.position = 'fixed';
+//       parentDiv.style.top = '0';
+//       parentDiv.style.bottom = '-30px';
+//       parentDiv.style.left = '0';
+//       parentDiv.style.right = '0';
+//       parentDiv.style.zIndex = '100';
+//       parentDiv.style.border = 'none';
+//       parentDiv.style.borderRadius = '0';
+//       parentDiv.style.padding = '15px 30px';
+//       title.style.color = 'red';
+//     });
+</script>
+
+</html>
