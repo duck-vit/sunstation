@@ -1,0 +1,46 @@
+
+#header_button_image {
+    border-bottom: 8px solid rgba(255,213,79,1.0000000000);
+}
+
+/* #button_funny_img {
+    background-color: rgba(255,213,79,1);
+    position: absolute;
+    right: 0;
+    font-family: 'Fira Sans';
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+}
+
+#button_funny_img:hover {
+    box-shadow: 0 0 8px rgb(155, 155, 155);
+} */
+
+.main_topic_box {
+    background-color: aqua;
+    color: black;
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 40px;
+    line-height: 190px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+    margin-left: 25px;
+}
+
+.main_topic_box:hover {
+    background-color: darkorange;
+    font-size: 30px;
+}

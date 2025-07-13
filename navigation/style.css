@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+}
+
+.navigation-item {
+    height: 89.3px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(79,71,78,1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 23px;
+    line-height: 89.3px;
+    cursor: pointer;
+}
+
+.navigation-item:hover {
+    color: black;
+    background-color: rgba(255,213,79,1.0000000000);
+}

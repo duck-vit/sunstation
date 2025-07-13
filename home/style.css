@@ -1,0 +1,274 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+@media only screen and (max-width: 965px) {
+#content {
+    margin: 370px 15px 0px;
+}
+}
+
+#father_content {
+    background-color: #f5f2f0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+/* #header,
+#header_introduce {
+    position: absolute;
+    border-bottom: 10px solid #ffd54f;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 340px;
+}
+
+#header_introduce {
+    background-image: url("/sunstation/material/image/home_header_background_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: unset;
+    background-position: bottom;
+    background-position-y: -512px;
+    position: absolute;
+    border-bottom: 10px solid #ffd54f;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 340px;
+}
+
+#header_navigation_bgr,
+#header_navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 57px;
+    transition: 0.2s;
+}
+
+#header_navigation_bgr {
+    background-color: rgb(79, 71, 78);
+    z-index: -1;
+}
+#header_navigation:hover {
+    box-shadow: 0 0 15px black;
+}
+
+#header_menu_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    line-height: 57px;
+    font-size: 35px;
+    margin-left: 12px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+#link_header_logo,
+#header_logo {
+    position: relative;
+    width: 45px;
+    margin-left: 20px;
+    margin: 6px 0px 6px 40px;
+    border-radius: 30px;
+    user-select: none;
+    cursor: default;
+}
+
+#header_home_name {
+    position: absolute;
+    color: white;
+    display: inline-block;
+    line-height: 57px;
+    font-family: 'Hubballi', cursive;
+    margin-left: 15px;
+    font-size: 30px;
+    cursor: default;
+}
+
+#header__text--name_web {
+    position: absolute;
+    color: yellow;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(340px - 57px);
+    text-align: center;
+    font-family: roboto;
+    font-size: 120px;
+    font-weight: 600;
+    line-height: calc(340px - 120px);
+}
+
+.header_button_navigation {
+    color: white;
+    display: inline-block;
+    float: right;
+    line-height: 49px;
+    margin-right: 18px;
+    cursor: pointer;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.1s;
+}
+
+#header_button_search_hide:hover,
+#header_button_search:hover,
+.header_button_navigation:hover {
+    opacity: 0.6;
+} */
+
+#header_button_home {
+    border-bottom: 8px solid rgba(255,213,79,1.0000000000);
+}
+
+/* #header_button_search_hide,
+#header_button_search {
+    filter: brightness(50);
+    height: 40px;
+    margin: 8.5px 8.5px 8.5px 20px;
+    float: right;
+    transition: 0.1s;
+    user-select: none;
+}
+
+#header_button_search_hide {
+    display: none;
+}
+
+@keyframes move_right {
+    from {
+        margin-right:-260px;
+    } to {
+        margin-right:13px;
+    }
+}
+
+#header_search_box {
+    display: none;
+    background-color: rgba(79,71,78,1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 256px;
+    height: 78px;
+    margin: 70px 13px 0px 0px;
+    box-shadow: 0 0 15px black;
+    animation: move_right ease 0.3s;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+#header_input_search {
+    background-color: rgba(79,71,78,1);
+    color: yellow;
+    width: 190px;
+    height: 30px;
+    border-right: none;
+    border-top: none;
+    margin: 24px 0px 24px 15px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+#header_button_search_submit,
+#header_img_button_search_submit {
+    position: absolute;
+    width: 30px;
+    display: inline-block;
+    filter: saturate(50);
+    margin: 12px 6px;
+    cursor: pointer;
+} */
+
+#content {
+    /* background-color: tomato; */
+    margin: 420px 80px 0px;
+}
+
+.title_text {
+    color: #00b300;
+    font-family: roboto;
+    font-size: 40px;
+    border-bottom: 5px solid yellow;
+    display: inline-block;
+    line-height: 75px;
+    margin-bottom: 25px;
+}
+
+.text {
+    text-indent: 28px;
+    font-family: roboto;
+    font-size: 16pt;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+/* #footer {
+    background-color: #ffd54f;
+    height: 400px;
+    margin-top: 100px;
+}
+
+#footer_content {
+    display: inline-block;
+    width: calc(100% - calc(100% / 3.3));
+    height: 100%;
+    padding: 30px 0px 0px 30px;
+}
+
+#link_channel:hover {
+    color: blue;
+}
+
+#footer_text_title_name {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+}
+
+#footer_image_logo {
+    position: absolute;
+    border-radius: 20px;
+    margin: 25px;
+    width: calc(100% / 3.8);
+    right: 0;
+}
+
+.footer_social_img_link {
+    background-color: #00b300;
+    width: 230px;
+    height: 100px;
+    margin-bottom: 26px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: unset;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer_social_img_link:hover {
+    border: 10px solid white;
+}
+
+#youtube_image_link {
+    background-image: url("/sunstation/material/image/youtube_image_link.png");
+    background-position-y: -64px;
+}
+
+#tiktok_image_link {
+    background-image: url("/sunstation/material/image/1-cach-bat-kiem-tien-tren-tiktok.jpg");
+    background-position-y: -14px;
+} */

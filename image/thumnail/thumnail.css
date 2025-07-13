@@ -1,0 +1,21 @@
+
+.img_thumnail {
+    margin-left: 70px;
+}
+
+.img {
+    border: 3px solid cornflowerblue;
+}
+
+.img_thumnail,
+.img {
+    width: 358px;
+    height: 206.25px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    object-position: 50% 50%;
+}
+
+.img:hover {
+    filter: brightness(125%);
+}
