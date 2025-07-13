@@ -1,0 +1,18 @@
+.sign_in_button {
+    background-color: rgba(255,213,79,1);
+    color: black;
+    position: absolute;
+    font-family: 'Fira Sans';
+    text-decoration: none;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+}
+
+.sign_in_button:hover {
+    box-shadow: 0 0 8px rgb(155, 155, 155);
+}

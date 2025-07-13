@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* Chiều rộng vùng chứa scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #cccccc;        /* Màu nền ngoài của thanh scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: yellow;    /* Màu của thanh cuộn (scroll thumb) */
+  border-radius: 5px;       /* Bo góc scroll thumb */
+  border: 0px solid #cccccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ffd54f; /* Hiệu ứng di chuột đổi màu*/
+}
+body { /*cho Firefox*/
+    scrollbar-width: thin;          /* "auto" hoặc "thin" */
+    scrollbar-color: orange #cccccc;   /* scroll thumb and track */
+}
+
+@media only screen and (max-width: 1238px) {
+#footer_content {
+    clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+}
+}
+
+@media only screen and (max-width: 965px) {
+#header {
+    width: 100vw;
+}
+  
+#footer {
+    width: 100vw;
+}
+
+#header_navigation_bgr,
+#header_navigation {
+    width: 100vw;
+}
+  
+#header_menu_icon:hover #navigation_button {
+    display: block;
+}
+
+.header_button_navigation {
+    clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+}
+  
+#footer_content {
+    clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+}
+  
+/* #footer_image_logo {
+    width: 250rem;
+} */
+}
+
+#header,
+#header_introduce {
+    position: absolute;
+    border-bottom: 10px solid #ffd54f;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 340px;
+}
+
+#header_introduce {
+/*     background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_background_image.png?v=1647326972754");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: unset;
+    background-position: bottom;
+    background-position-y: -512px; */
+    background: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_background_image.png?v=1647326972754") no-repeat 50%;
+    background-size: 100% auto;
+    position: absolute;
+    border-bottom: 10px solid #ffd54f;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 340px;
+}
+
+#header_navigation_bgr,
+#header_navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 57px;
+    transition: 0.2s;
+}
+
+#header_navigation_bgr {
+    background-color: rgb(79, 71, 78);
+    z-index: -1;
+}
+
+#header_navigation:hover {
+    box-shadow: 0 0 15px black;
+}
+
+#header_menu_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    line-height: 57px;
+    font-size: 35px;
+    margin-left: 12px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+#header_menu_icon:hover > #header_menu_box {
+    display: block;
+}
+
+#header_menu_box {
+    background-color: rgba(79,71,78,1);
+    position: absolute;
+    width: 200px;
+    margin-left: -12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 23px;
+    box-shadow: 0 0 10px black;
+    display: none;
+}
+
+.header_menu_items {
+    padding-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.header_menu_items:hover {
+    background-color: #ffd54f;
+    color: black;
+}
+
+#navigation_button {
+    display: none;
+}
+
+#link_header_logo,
+#header_logo {
+    position: relative;
+    width: 45px;
+    margin-left: 20px;
+    margin: 6px 0px 6px 40px;
+    border-radius: 30px;
+    user-select: none;
+    cursor: default;
+}
+
+#header_home_name {
+    position: absolute;
+    color: white;
+    display: inline-block;
+    line-height: 57px;
+    font-family: 'Hubballi', cursive;
+    margin-left: 15px;
+    font-size: 30px;
+    cursor: default;
+}
+
+#header__text--name_web {
+    position: absolute;
+    color: yellow;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(340px - 57px);
+    text-align: center;
+    font-family: roboto;
+    font-size: 10vw;
+    font-weight: 600;
+    line-height: calc(340px - 120px);
+}
+
+.header_button_navigation {
+    color: white;
+    display: inline-block;
+    float: right;
+    line-height: 49px;
+    margin-right: 18px;
+    cursor: pointer;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+#header_button_search_hide:hover,
+#header_button_search:hover,
+.header_button_navigation:hover {
+    opacity: 0.6;
+}
+
+#header_button_search_hide,
+#header_button_search {
+    filter: brightness(50);
+    height: 40px;
+    margin: 8.5px 8.5px 8.5px 20px;
+    float: right;
+    transition: 0.1s;
+    user-select: none;
+}
+
+#header_button_search_hide {
+    display: none;
+}
+
+@keyframes move_right {
+    from {
+        margin-right:-260px;
+    } to {
+        margin-right:13px;
+    }
+}
+
+#header_search_box {
+    display: none;
+    background-color: rgba(79,71,78,1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 256px;
+    height: 78px;
+    margin: 70px 13px 0px 0px;
+    box-shadow: 0 0 15px black;
+    animation: move_right ease 0.3s;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+#header_input_search {
+    background-color: rgba(79,71,78,1);
+    color: yellow;
+    width: 190px;
+    height: 30px;
+    border-right: none;
+    border-top: none;
+    margin: 24px 0px 24px 15px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+#header_button_search_submit,
+#header_img_button_search_submit {
+    position: absolute;
+    width: 30px;
+    display: inline-block;
+    filter: saturate(50);
+    margin: 12px 6px;
+    cursor: pointer;
+}
+
+#father_content {
+    background-color: #f5f2f0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+.button_yl {
+    background-color: rgba(255,213,79,1);
+    color: black;
+    position: absolute;
+    right: 0;
+    font-family: 'Fira Sans';
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.button_yl:hover {
+    box-shadow: 0 0 8px rgb(155, 155, 155);
+}
+
+.button_center {
+    background-color: rgba(255,213,79,1);
+    color: black;
+    font-family: 'Fira Sans';
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button_center:hover {
+    box-shadow: 0 0 8px rgb(155, 155, 155);
+}
+
+.video_player {
+    width: 300px;
+}
+
+#footer {
+    background-color: #ffd54f;
+    height: 400px;
+    margin-top: 100px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+#footer_content {
+    display: inline-block;
+    width: calc(100% - calc(100% / 3.3));
+    height: 100%;
+    padding: 30px 0px 0px 30px;
+}
+
+#link_channel:hover {
+    color: blue;
+}
+
+#footer_text_title_name {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+}
+
+#footer_image_logo {
+    position: absolute;
+    border-radius: 20px;
+    margin: 25px;
+    width: 25.6vw;
+    right: 0;
+}
+
+.footer_social_img_link {
+    background-color: #00b300;
+    width: 230px;
+    height: 100px;
+    margin-bottom: 26px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: unset;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer_social_img_link:hover {
+    border: 10px solid white;
+}
+
+#youtube_image_link {
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/youtube_image_link.png?v=1647326982666");
+    background-position-y: -64px;
+}
+
+#tiktok_image_link {
+    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/1-cach-bat-kiem-tien-tren-tiktok.jpg?v=1647326985825");
+    background-position-y: -14px;
+}
+
+.button {
+    background-color: rgba(255,213,79,1);
+    position: absolute;
+    right: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover {
+    box-shadow: 0 0 8px rgb(155 155 155);
+}
