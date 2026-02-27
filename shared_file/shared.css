@@ -77,7 +77,7 @@ body { /*cho Firefox*/
     background-origin: unset;
     background-position: bottom;
     background-position-y: -512px; */
-    background: url("/material/level-header.png") no-repeat 50%;
+    background: url("https://duck-vit.github.io/sunstation/material/level-header.png") no-repeat 50%;
     background-color: #ffd54f;
     background-size: 100% auto;
     position: absolute;
