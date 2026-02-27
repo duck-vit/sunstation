@@ -78,6 +78,7 @@ body { /*cho Firefox*/
     background-position: bottom;
     background-position-y: -512px; */
     background: url("/material/level-header.png") no-repeat 50%;
+    background-color: #ffd54f;
     background-size: 100% auto;
     position: absolute;
     border-bottom: 10px solid #ffd54f;
