@@ -77,7 +77,7 @@ body { /*cho Firefox*/
     background-origin: unset;
     background-position: bottom;
     background-position-y: -512px; */
-    background: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/home_header_background_image.png?v=1647326972754") no-repeat 50%;
+    background: url("/material/level-header.png") no-repeat 50%;
     background-size: 100% auto;
     position: absolute;
     border-bottom: 10px solid #ffd54f;
