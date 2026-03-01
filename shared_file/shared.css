@@ -209,8 +209,9 @@ body { /*cho Firefox*/
 #header_button_search_hide,
 #header_button_search {
     filter: brightness(50);
-    height: 40px;
-    margin: 8.5px 8.5px 8.5px 20px;
+    /* height: 40px; */
+    font-size: 25px;
+    margin: 16.5px 24.5px 8.5px 20px;
     float: right;
     transition: 0.1s;
     user-select: none;
@@ -258,7 +259,8 @@ body { /*cho Firefox*/
 #header_button_search_submit,
 #header_img_button_search_submit {
     position: absolute;
-    width: 30px;
+    /* width: 30px; */
+    font-size: 25px;
     display: inline-block;
     filter: saturate(50);
     margin: 12px 6px;
