@@ -369,12 +369,12 @@ body { /*cho Firefox*/
 
 #youtube_image_link {
     background-image: url("https://duck-vit.github.io/sunstation/material/youtube.jpg");
-    background-position-y: -64px;
+    background-position-y: -16px;
 }
 
 #tiktok_image_link {
     background-image: url("https://duck-vit.github.io/sunstation/material/tiktok.jpg");
-    background-position-y: -14px;
+    background-position-y: -6px;
 }
 
 .button {
