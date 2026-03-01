@@ -368,12 +368,12 @@ body { /*cho Firefox*/
 }
 
 #youtube_image_link {
-    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/youtube_image_link.png?v=1647326982666");
+    background-image: url("https://duck-vit.github.io/sunstation/material/youtube.jpg");
     background-position-y: -64px;
 }
 
 #tiktok_image_link {
-    background-image: url("https://cdn.glitch.global/9a8d4922-5a78-47fa-a7bb-ec34d1d8765b/1-cach-bat-kiem-tien-tren-tiktok.jpg?v=1647326985825");
+    background-image: url("https://duck-vit.github.io/sunstation/material/tiktok.jpg");
     background-position-y: -14px;
 }
 
