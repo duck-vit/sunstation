@@ -211,6 +211,7 @@ body { /*cho Firefox*/
     filter: brightness(50);
     /* height: 40px; */
     font-size: 25px;
+    color: #ffffff;
     margin: 16.5px 24.5px 8.5px 20px;
     float: right;
     transition: 0.1s;
@@ -261,6 +262,7 @@ body { /*cho Firefox*/
     position: absolute;
     /* width: 30px; */
     font-size: 25px;
+    color: #ffffff;
     display: inline-block;
     filter: saturate(50);
     margin: 12px 6px;
